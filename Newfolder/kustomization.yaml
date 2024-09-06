@@ -1,6 +1,6 @@
 secretGenerator:
 - name: example-secret-1
   files:
-  - ../password.txt
+  - appsetings/password.txt
   options:
     disableNameSuffixHash: true  # Optional: Disables the hash suffix added to the secret name
