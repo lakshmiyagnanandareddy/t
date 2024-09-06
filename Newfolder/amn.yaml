@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temp-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: temp-app
+  template:
+    metadata:
+      labels:
+        app: temp-app
+    spec:
+      containers:
+      - name: temp-container
+        image: nginx  # Replace with the image you need
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: secret-volume
+          mountPath: /etc/secret  # Path where the Secret will be mounted
+      volumes:
+      - name: secret-volume
+        secret:
+          secretName:  example-secret-1-2kdd8ckcc7
