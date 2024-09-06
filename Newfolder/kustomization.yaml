@@ -6,5 +6,5 @@ resources:
 secretGenerator:
   - name: example-secret
     files:
-      - password.txt=appsettings/password.txt  # Ensure the path is relative to the kustomization.yaml file
+      - password.txt=appsetings/password.txt  # Ensure the path is relative to the kustomization.yaml file
 
