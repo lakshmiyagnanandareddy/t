@@ -1,6 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  # List your resource files or directories here, e.g.,
+  # - deployment.yaml
 secretGenerator:
-- name: example-secret-1
-  files:
-  - appsetings/password.txt
-  options:
-    disableNameSuffixHash: true  # Optional: Disables the hash suffix added to the secret name
+  - name: example-secret
+    files:
+      - password.txt=appsettings/password.txt  # Ensure the path is relative to the kustomization.yaml file
+
