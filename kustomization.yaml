@@ -1,0 +1,4 @@
+secretGenerator:
+  - name: example-secret
+    files:
+      - ../Newfolder/appsettings/password.txt
