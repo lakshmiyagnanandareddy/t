@@ -1,5 +1,0 @@
-secretGenerator:
-  - name: example-secret
-    files:
-      - appsettings/password.txt  # Ensure the path is relative to the kustomization.yaml file
-
